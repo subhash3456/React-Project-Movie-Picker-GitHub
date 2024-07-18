@@ -1,0 +1,8 @@
+.filterform {
+  display: flex;
+  flex-direction: column;
+  /* width: 30vh; */
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}

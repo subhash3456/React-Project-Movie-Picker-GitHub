@@ -1,0 +1,164 @@
+{
+  "movies": [
+    {
+      "id": "1",
+      "name": "hulk 3",
+      "rating": "6.9",
+      "avalaibleOn": "netflix",
+      "suggestedBy": "subhash",
+      "genre": "thriller",
+      "trailerlink": "hulk 3 trailer youtube URL"
+    },
+    {
+      "id": "2",
+      "name": "iron man 3",
+      "rating": "8.9",
+      "avalaibleOn": "hotstar",
+      "suggestedBy": "chandu",
+      "genre": "Action",
+      "trailerlink": "iron man 3 trailer youtube URL"
+    },
+    {
+      "id": "81cb",
+      "name": "pionist",
+      "rating": "9",
+      "avalaibleOn": "Downloaded",
+      "suggestedBy": "chandu",
+      "genre": "Emotional drama",
+      "trailerlink": "pionist link"
+    }
+  ],
+  "allMovies": [
+    {
+      "id": "1",
+      "name": "hulk 3",
+      "rating": "6.9",
+      "avalaibleOn": "netflix",
+      "suggestedBy": "subhash",
+      "genre": "thriller",
+      "trailerlink": "hulk 3 trailer youtube URL"
+    },
+    {
+      "id": "2",
+      "name": "iron man 3",
+      "rating": "8.9",
+      "avalaibleOn": "hotstar",
+      "suggestedBy": "chandu",
+      "genre": "Action",
+      "trailerlink": "iron man 3 trailer youtube URL"
+    },
+    {
+      "id": "81cb",
+      "name": "pionist",
+      "rating": "9",
+      "avalaibleOn": "Downloaded",
+      "suggestedBy": "chandu",
+      "genre": "Emotional drama",
+      "trailerlink": "pionist link"
+    }
+  ],
+  "randomMovie": [
+    {
+      "id": "2",
+      "name": "iron man 3",
+      "rating": "8.9",
+      "avalaibleOn": "hotstar",
+      "suggestedBy": "chandu",
+      "genre": "Action",
+      "trailerlink": "iron man 3 trailer youtube URL"
+    }
+  ],
+  "addMovie": [
+    {
+      "id": "00f2",
+      "name": "loki",
+      "rating": "9",
+      "avalaibleOn": "flixwave",
+      "suggestedBy": "subhash",
+      "genre": "mystery",
+      "trailerlink": "loki link"
+    }
+  ],
+  "filterMovies": [
+    {
+      "id": "7d68",
+      "name": "",
+      "rating": "",
+      "avalaibleOn": "",
+      "suggestedBy": "",
+      "genre": "",
+      "": "thriller"
+    },
+    {
+      "id": "6402",
+      "name": "",
+      "rating": "",
+      "avalaibleOn": "",
+      "suggestedBy": "",
+      "genre": "",
+      "": "sfeasdf"
+    }
+  ],
+  "filterMovie": [
+    [
+      {
+        "id": "7d68",
+        "name": "thor",
+        "rating": "",
+        "avalaibleOn": "",
+        "suggestedBy": "",
+        "genre": "",
+        "": "thriller"
+      },
+      {
+        "id": "6402",
+        "name": "thor",
+        "rating": "",
+        "avalaibleOn": "",
+        "suggestedBy": "",
+        "genre": "",
+        "": "sfeasdf"
+      }
+    ],
+    {
+      "id": "f92e",
+      "name": "thor",
+      "rating": "",
+      "avalaibleOn": "",
+      "suggestedBy": "",
+      "genre": ""
+    },
+    {
+      "id": "0332",
+      "name": "thor",
+      "rating": "",
+      "avalaibleOn": "",
+      "suggestedBy": "",
+      "genre": ""
+    },
+    {
+      "id": "81b8",
+      "name": "",
+      "rating": "9",
+      "avalaibleOn": "",
+      "suggestedBy": "",
+      "genre": ""
+    },
+    {
+      "id": "c94e",
+      "name": "thor",
+      "rating": "",
+      "avalaibleOn": "",
+      "suggestedBy": "",
+      "genre": ""
+    },
+    {
+      "id": "5f80",
+      "name": "thor",
+      "rating": "",
+      "avalaibleOn": "",
+      "suggestedBy": "",
+      "genre": ""
+    }
+  ]
+}

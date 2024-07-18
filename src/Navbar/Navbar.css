@@ -1,0 +1,20 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 10vh;
+}
+
+.NavBarLink {
+  margin: 0 20px;
+}
+
+.navbarImg {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+}
+
+* {
+  background-color: antiquewhite;
+}

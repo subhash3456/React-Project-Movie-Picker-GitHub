@@ -1,0 +1,7 @@
+.movieForm {
+  display: flex;
+  flex-direction: column;
+  /* width: 30vh; */
+  align-items: center;
+  justify-content: center;
+}
