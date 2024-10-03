@@ -77,6 +77,60 @@
       "suggestedBy": "subhash",
       "genre": "mystery",
       "trailerlink": "loki link"
+    },
+    {
+      "id": "6f8c",
+      "name": "CODA",
+      "rating": "9",
+      "avalaibleOn": "netflix",
+      "suggestedBy": "Subhash",
+      "genre": "Drama",
+      "trailerlink": "youtubeLink"
+    },
+    {
+      "id": "bcd4",
+      "name": "",
+      "rating": "",
+      "avalaibleOn": "",
+      "suggestedBy": "",
+      "genre": "",
+      "trailerlink": ""
+    },
+    {
+      "id": "07d0",
+      "name": "hulk 2",
+      "rating": "9.3",
+      "avalaibleOn": "flixwave",
+      "suggestedBy": "naveen",
+      "genre": "Marvel",
+      "trailerlink": "pionist link"
+    },
+    {
+      "id": "65bb",
+      "name": "arsehole",
+      "rating": "2",
+      "avalaibleOn": "Downloaded",
+      "suggestedBy": "naveen",
+      "genre": "act",
+      "trailerlink": "arseholetraielrLink"
+    },
+    {
+      "id": "e3c6",
+      "name": "",
+      "rating": "",
+      "avalaibleOn": "",
+      "suggestedBy": "",
+      "genre": "",
+      "trailerlink": ""
+    },
+    {
+      "id": "8e5c",
+      "name": "thor",
+      "rating": "9",
+      "avalaibleOn": "prime",
+      "suggestedBy": "McK",
+      "genre": "Action",
+      "trailerlink": "loki link"
     }
   ],
   "filterMovies": [
@@ -155,6 +209,14 @@
     {
       "id": "5f80",
       "name": "thor",
+      "rating": "",
+      "avalaibleOn": "",
+      "suggestedBy": "",
+      "genre": ""
+    },
+    {
+      "id": "5d41",
+      "name": "crew",
       "rating": "",
       "avalaibleOn": "",
       "suggestedBy": "",

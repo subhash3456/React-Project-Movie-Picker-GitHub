@@ -1,48 +1,65 @@
 import { useEffect, useState } from "react";
 import MovieList from "../MovieList/MovieList";
 import api from "../api/moviesapi";
+import axios from "axios";
 
 const Home = () => {
-  const [movieList, setMovieList] = useState([
-    // {
-    //   name: "",
-    //   rating: "",
-    //   avalaibleOn: "",
-    //   suggestedBy: "",
-    //   genre: "",
-    //   trailerlink: "",
-    // },
-  ]);
-
-  //retrieve movies
-  const retrieveMovies = async () => {
-    const response = await api.get("/allMovies");
-    return response;
-  };
+  const [movieList, setMovieList] = useState([]);
 
   useEffect(() => {
-    const getAllMovies = async () => {
-      const allMovies = await retrieveMovies();
-
-      if (allMovies) setMovieList(allMovies.data);
+    const retrieveMovies = async () => {
+      try {
+        const response = await api.get("/allMovies");
+        setMovieList(response.data);
+      } catch (error) {
+        console.error("Error :", error);
+      }
     };
 
-    getAllMovies();
+    retrieveMovies();
   }, []);
 
   return (
     <>
-      {/* <ul>
-        {movieList.map((x) => (
-          <li key={x.id}>{x.name}</li>
-        ))}
-      </ul> */}
+      <h1>Movies List</h1>
       <MovieList list={movieList} />
     </>
   );
 };
 
 export default Home;
+
+//retrieve movies
+// const retrieveMovies = async () => {
+//   const response = await api.get("/allMovies");
+//   return response;
+// };
+
+// useEffect(() => {
+//   const getAllMovies = async () => {
+//     const allMovies = await retrieveMovies();
+
+//     if (allMovies) setMovieList(allMovies.data);
+//   };
+
+//   getAllMovies();
+// }, []);
+
+{
+  /* <ul>
+        {movieList.map((x) => (
+          <li key={x.id}>{x.name}</li>
+        ))}
+      </ul> */
+}
+// {
+//   name: "",
+//   rating: "",
+//   avalaibleOn: "",
+//   suggestedBy: "",
+//   genre: "",
+//   trailerlink: "",
+// },
 
 // const [movieList, setMovieList] = useState([
 //   { name: "deadpool", rating: 9, id: 1 },

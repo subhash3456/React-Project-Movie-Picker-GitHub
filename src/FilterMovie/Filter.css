@@ -6,3 +6,15 @@
   justify-content: center;
   gap: 20px;
 }
+
+.filterlabels {
+  font-size: 25px;
+  padding: 10px 10px;
+  color: rgb(68, 50, 152);
+}
+
+.filterinputs {
+  font-size: 15px;
+  padding: 5px 5px;
+  margin: 10px;
+}

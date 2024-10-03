@@ -3,18 +3,68 @@
   align-items: center;
   justify-content: space-between;
   height: 10vh;
+
+  /* margin: 5px; */
+  /* background-color: antiquewhite; */
+  font-weight: 400;
+  margin: auto;
 }
 
 .NavBarLink {
   margin: 0 20px;
+  /* background-color: antiquewhite; */
+}
+
+.Home {
+  font-size: 20px;
+  padding: 10px;
+  font-weight: 600;
+
+  background-color: rgb(136, 112, 84);
+}
+
+.Home:hover {
+  background-color: rgb(58, 92, 92);
+}
+
+.AddMovie {
+  font-size: 20px;
+  padding: 10px;
+  font-weight: 600;
+
+  background-color: rgb(136, 112, 84);
+}
+
+.AddMovie:hover {
+  background-color: rgb(58, 92, 92);
+}
+
+.RandomMovie {
+  font-size: 20px;
+  padding: 10px;
+  font-weight: 600;
+
+  background-color: rgb(136, 112, 84);
+}
+
+.RandomMovie:hover {
+  background-color: rgb(58, 92, 92);
+}
+
+.Filter {
+  font-size: 20px;
+  padding: 10px;
+  font-weight: 600;
+
+  background-color: rgb(136, 112, 84);
+}
+
+.Filter:hover {
+  background-color: rgb(58, 92, 92);
 }
 
 .navbarImg {
   width: 70px;
   height: 70px;
   object-fit: cover;
-}
-
-* {
-  background-color: antiquewhite;
 }

@@ -1,5 +1,21 @@
 .movie {
-  display: flex;
+  /* display: flex; */
+  margin: 5px;
+  padding: 5px 5px;
+  border: solid black;
+  color: rgb(78, 61, 38);
+}
+
+.movieClass {
+  /* justify-content: center; */
+  /* display: ; */
+  border: solid black;
+  margin: 15px;
+  padding: 5px;
+  /* margin: auto; */
+  /* align-items: center; */
+  width: 20vh;
+  /* height: ; */
 }
 
 .moviesListclass {

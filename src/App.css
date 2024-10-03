@@ -1,0 +1,10 @@
+.appClass {
+  font-family: "Roboto", sans-serif;
+  /* font-weight: 100; */
+  /* font-style: normal; */
+  /* background-color: darkgoldenrod; */
+}
+
+* {
+  background-color: rgb(177, 168, 156);
+}

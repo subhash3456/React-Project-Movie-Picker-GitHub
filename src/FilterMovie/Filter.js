@@ -4,6 +4,7 @@ import "../FilterMovie/Filter.css";
 import { useState } from "react";
 import MovieList from "../MovieList/MovieList";
 // import FilteredMovie from "./FilteredMovie";
+import axios from "axios";
 
 const Filter = () => {
   const [filter, setFilter] = useState({
@@ -24,22 +25,44 @@ const Filter = () => {
     // },
   ]);
 
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFilter({ ...filter, [name]: value });
   };
 
-  const handleSubmit = async () => {
-    const response = await api.get("/filterMovie", filter);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setError(null);
+    setFilteredMovies(null);
 
-    console.log("successfully retrieved the filtered movie");
+    try {
+      const response = await api.post("/filterMovie", filter);
+      setFilteredMovies(response.data);
+    } catch (err) {
+      setError(err.message || "Something went wrong");
+    } finally {
+      setLoading(false);
+    }
 
-    console.log(response);
-    console.log(response.data);
+    // console.log(response.data);
 
-    setFilteredMovies(response.data);
+    // setFilteredMovies(response.data);
   };
 
+  const handleClearFilter = () => {
+    setFilter({
+      name: "",
+      rating: "",
+      avalaibleOn: "",
+      suggestedBy: "",
+      genre: "",
+    });
+    setFilteredMovies([]);
+  };
   // useEffect(() => {
   //   setFilteredMovies(response.data);
   // }, []);
@@ -47,56 +70,75 @@ const Filter = () => {
   return (
     <>
       <div>
-        <form action="" className="filterform" onSubmit={handleSubmit}>
-          <label name="name">
+        <form onSubmit={handleSubmit}>
+          <label name="name" className="filterlabels">
             Movie Name :
-            <input
-              type="text"
-              name="name"
-              value={filter.name}
-              onChange={handleChange}
-            />
           </label>
-          <label name="rating">
-            Rating:
-            <input
-              type="text"
-              name="rating"
-              value={filter.rating}
-              onChange={handleChange}
-            />
-          </label>
-          <label name="avalaibleOn">
-            AvalaibleOn :
-            <input
-              type="text"
-              name="avalaibleOn"
-              value={filter.avalaibleOn}
-              onChange={handleChange}
-            />
-          </label>
-          <label name="suggestedBy">
-            SuggestedBy :
-            <input
-              type="text"
-              name="suggestedBy"
-              value={filter.suggestedBy}
-              onChange={handleChange}
-            />
-          </label>
-          <label name="genre">
-            Genre :
-            <input
-              type="text"
-              name="genre"
-              value={filter.genre}
-              onChange={handleChange}
-            />
-          </label>
-          <input type="submit" />
-        </form>
+          <input
+            type="text"
+            name="name"
+            value={filter.name}
+            onChange={handleChange}
+            className="filterinputs"
+          />
 
-        <MovieList list={filteredMovies} />
+          <label name="rating" className="filterlabels">
+            Rating:
+          </label>
+          <input
+            type="text"
+            name="rating"
+            value={filter.rating}
+            onChange={handleChange}
+            className="filterinputs"
+          />
+
+          <label name="avalaibleOn" className="filterlabels">
+            AvalaibleOn :
+          </label>
+          <input
+            type="text"
+            name="avalaibleOn"
+            value={filter.avalaibleOn}
+            onChange={handleChange}
+            className="filterinputs"
+          />
+
+          <label name="suggestedBy" className="filterlabels">
+            SuggestedBy :{" "}
+          </label>
+          <input
+            type="text"
+            name="suggestedBy"
+            value={filter.suggestedBy}
+            onChange={handleChange}
+            className="filterinputs"
+          />
+
+          <label name="genre" className="filterlabels">
+            Genre :{" "}
+          </label>
+          <input
+            type="text"
+            name="genre"
+            value={filter.genre}
+            onChange={handleChange}
+            className="filterinputs"
+          />
+
+          <button type="submit" disabled={loading}>
+            {loading ? "Submitting..." : "Submit"}
+          </button>
+        </form>
+        <button onClick={handleClearFilter}>Clear Filter</button>
+
+        {loading && <p>Loading...</p>}
+        {error && <p>Error: {error}</p>}
+        {filteredMovies && (
+          <div>
+            <MovieList list={filteredMovies} />
+          </div>
+        )}
       </div>
     </>
   );
